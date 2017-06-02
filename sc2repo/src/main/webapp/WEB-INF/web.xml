@@ -53,6 +53,28 @@
         </init-param>
         <load-on-startup>2</load-on-startup>
     </servlet>
+    
+    <servlet>
+        <servlet-name>RepoServlet22</servlet-name>
+        <servlet-class>ca.nrc.cadc.rest.RestServlet</servlet-class>
+        <init-param>
+            <param-name>get</param-name>
+            <param-value>ca.nrc.cadc.caom2.repo.action.GetAction22</param-value>
+        </init-param>
+        <init-param>
+            <param-name>post</param-name>
+            <param-value>ca.nrc.cadc.caom2.repo.action.PostAction</param-value>
+        </init-param>
+        <init-param>
+            <param-name>put</param-name>
+            <param-value>ca.nrc.cadc.caom2.repo.action.PutAction</param-value>
+        </init-param>
+        <init-param>
+            <param-name>delete</param-name>
+            <param-value>ca.nrc.cadc.caom2.repo.action.DeleteAction</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
 
     <servlet>
         <load-on-startup>3</load-on-startup>
@@ -94,12 +116,22 @@
 
     <servlet-mapping>
         <servlet-name>RepoServlet</servlet-name>
-        <url-pattern>/observations/*</url-pattern>
+        <url-pattern>/obs23/*</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>RepoServlet</servlet-name>
-        <url-pattern>/auth-observations/*</url-pattern>
+        <url-pattern>/obs23-auth/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>RepoServlet22</servlet-name>
+        <url-pattern>/obs22/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RepoServlet22</servlet-name>
+        <url-pattern>/obs22-auth/*</url-pattern>
     </servlet-mapping>
 
     <!-- security constraints -->
@@ -113,7 +145,8 @@
         <web-resource-collection>
             <web-resource-name>auth</web-resource-name>
             <description/>
-            <url-pattern>/auth-observations/*</url-pattern>
+            <url-pattern>/obs22-auth/*</url-pattern>
+            <url-pattern>/obs23-auth/*</url-pattern>
             <url-pattern>/logControl/*</url-pattern>
             <http-method>GET</http-method>
             <http-method>POST</http-method>
