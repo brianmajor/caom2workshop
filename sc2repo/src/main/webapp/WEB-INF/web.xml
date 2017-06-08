@@ -33,7 +33,7 @@
     </servlet>
 
     <servlet>
-        <servlet-name>RepoServlet</servlet-name>
+        <servlet-name>ObsServlet</servlet-name>
         <servlet-class>ca.nrc.cadc.rest.RestServlet</servlet-class>
         <init-param>
             <param-name>get</param-name>
@@ -55,7 +55,7 @@
     </servlet>
     
     <servlet>
-        <servlet-name>RepoServlet22</servlet-name>
+        <servlet-name>ObsServlet22</servlet-name>
         <servlet-class>ca.nrc.cadc.rest.RestServlet</servlet-class>
         <init-param>
             <param-name>get</param-name>
@@ -115,23 +115,23 @@
   </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>RepoServlet</servlet-name>
+        <servlet-name>ObsServlet</servlet-name>
         <url-pattern>/obs23/*</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>RepoServlet</servlet-name>
-        <url-pattern>/obs23-auth/*</url-pattern>
+        <servlet-name>ObsServlet</servlet-name>
+        <url-pattern>/auth-obs23/*</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
-        <servlet-name>RepoServlet22</servlet-name>
+        <servlet-name>ObsServlet22</servlet-name>
         <url-pattern>/obs22/*</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>RepoServlet22</servlet-name>
-        <url-pattern>/obs22-auth/*</url-pattern>
+        <servlet-name>ObsServlet22</servlet-name>
+        <url-pattern>/auth-obs22/*</url-pattern>
     </servlet-mapping>
 
     <!-- security constraints -->
@@ -145,8 +145,8 @@
         <web-resource-collection>
             <web-resource-name>auth</web-resource-name>
             <description/>
-            <url-pattern>/obs22-auth/*</url-pattern>
-            <url-pattern>/obs23-auth/*</url-pattern>
+            <url-pattern>/auth-obs22/*</url-pattern>
+            <url-pattern>/auth-obs23/*</url-pattern>
             <url-pattern>/logControl/*</url-pattern>
             <http-method>GET</http-method>
             <http-method>POST</http-method>

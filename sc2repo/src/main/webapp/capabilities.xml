@@ -19,7 +19,7 @@
   <capability standardID="vos://cadc.nrc.ca~vospace/CADC/std/LOGGING#logControl-1.0">
     <interface xsi:type="vs:ParamHTTP" role="std" version="1.0">
       <accessURL use="full">http://replace.me.com/sc2repo/logControl</accessURL>     
-      <securityMethod standardID="http://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA"/>
+      <securityMethod standardID="ivo://ivoa.net/sso#BasicAA"/>
     </interface> 
   </capability> 
 
@@ -28,8 +28,12 @@
       <accessURL use="base">http://replace.me.com/sc2repo/obs22</accessURL>
     </interface>
     <interface xsi:type="vs:ParamHTTP" role="std">
-      <accessURL use="base">http://replace.me.com/sc2repo/obs22-auth</accessURL>
+      <accessURL use="base">http://replace.me.com/sc2repo/auth-obs22</accessURL>
       <securityMethod standardID="http://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA"/>
+    </interface>
+    <interface xsi:type="vs:ParamHTTP" role="std">
+      <accessURL use="base">http://replace.me.com/sc2repo/auth-obs22</accessURL>
+      <securityMethod standardID="ivo://ivoa.net/sso#BasicAA"/>
     </interface>
     <interface xsi:type="vs:ParamHTTP" role="std">
       <accessURL use="base">http://replace.me.com/sc2repo/obs22</accessURL>
@@ -46,8 +50,12 @@
       <accessURL use="base">http://replace.me.com/caom2repo/obs23</accessURL>
     </interface>
     <interface xsi:type="vs:ParamHTTP" role="std">
-      <accessURL use="base">http://replace.me.com/caom2repo/obs23-auth</accessURL>
+      <accessURL use="base">http://replace.me.com/caom2repo/auth-obs23</accessURL>
       <securityMethod standardID="http://www.w3.org/Protocols/HTTP/1.0/spec.html#BasicAA"/>
+    </interface>
+    <interface xsi:type="vs:ParamHTTP" role="std">
+      <accessURL use="base">http://replace.me.com/caom2repo/auth-obs23</accessURL>
+      <securityMethod standardID="ivo://ivoa.net/sso#BasicAA"/>
     </interface>
     <interface xsi:type="vs:ParamHTTP" role="std">
       <accessURL use="base">http://replace.me.com/caom2repo/obs23</accessURL>
